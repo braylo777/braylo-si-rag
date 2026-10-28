@@ -1,0 +1,337 @@
+{
+ "_doc": "Retrieval set. A chunk is relevant if its text contains every phrase in `must` (case-insensitive). Labels are computed, not hand-picked, so they are reproducible. split=dev was used to set SCOPE_MIN; split=test was not looked at while tuning.",
+ "retrieval": [
+  {
+   "id": "r1",
+   "split": "dev",
+   "q": "How much is the Agent Infrastructure Install?",
+   "must": [
+    "Agent Infrastructure Install",
+    "$497"
+   ]
+  },
+  {
+   "id": "r2",
+   "split": "dev",
+   "q": "What do I get in the free Discoverability Audit?",
+   "must": [
+    "monthly revenue leak"
+   ]
+  },
+  {
+   "id": "r3",
+   "split": "dev",
+   "q": "What is the mission of Braylo?",
+   "must": [
+    "maximize time with their families"
+   ]
+  },
+  {
+   "id": "r4",
+   "split": "dev",
+   "q": "Do you log into my accounts or ask for passwords?",
+   "must": [
+    "never ask for passwords"
+   ]
+  },
+  {
+   "id": "r5",
+   "split": "dev",
+   "q": "How do I cancel a weekly plan?",
+   "must": [
+    "one week's"
+   ]
+  },
+  {
+   "id": "r6",
+   "split": "dev",
+   "q": "How much do I pay in ad spend?",
+   "must": [
+    "ad spend"
+   ]
+  },
+  {
+   "id": "r7",
+   "split": "dev",
+   "q": "What does the Inbound Closing Engine Pro include?",
+   "must": [
+    "Inbound Closing Engine"
+   ]
+  },
+  {
+   "id": "r8",
+   "split": "dev",
+   "q": "Can the AI make outbound phone calls?",
+   "must": [
+    "written consent"
+   ]
+  },
+  {
+   "id": "r9",
+   "split": "dev",
+   "q": "How many video shoots has Braylo done?",
+   "must": [
+    "480+ video shoots"
+   ]
+  },
+  {
+   "id": "r10",
+   "split": "dev",
+   "q": "How do I claim the install guarantee refund?",
+   "must": [
+    "Install guarantee"
+   ]
+  },
+  {
+   "id": "r11",
+   "split": "dev",
+   "q": "Where do my AI agents run?",
+   "must": [
+    "own Grok Bot"
+   ]
+  },
+  {
+   "id": "r12",
+   "split": "dev",
+   "q": "What does Subcontractor Coordination VIP cost?",
+   "must": [
+    "Subcontractor Coordination",
+    "$2,000"
+   ]
+  },
+  {
+   "id": "r13",
+   "split": "test",
+   "q": "Is there a money back guarantee?",
+   "must": [
+    "money back"
+   ]
+  },
+  {
+   "id": "r14",
+   "split": "test",
+   "q": "How fast do you set up everything after I give access?",
+   "must": [
+    "14 calendar days"
+   ]
+  },
+  {
+   "id": "r15",
+   "split": "test",
+   "q": "Do I need a Grok subscription?",
+   "must": [
+    "You pay xAI directly"
+   ]
+  },
+  {
+   "id": "r16",
+   "split": "test",
+   "q": "What happens after I pay the $497?",
+   "must": [
+    "access checklist"
+   ]
+  },
+  {
+   "id": "r17",
+   "split": "test",
+   "q": "What should I not send you, like medical or financial records?",
+   "must": [
+    "regulated data"
+   ]
+  },
+  {
+   "id": "r18",
+   "split": "test",
+   "q": "How do I contact Braylo SI?",
+   "must": [
+    "@braylo_si"
+   ]
+  },
+  {
+   "id": "r19",
+   "split": "test",
+   "q": "¿Cuánto cuesta la Auditoría de Visibilidad?",
+   "must": [
+    "Auditoría de Visibilidad"
+   ]
+  },
+  {
+   "id": "r20",
+   "split": "test",
+   "q": "What does the autonomous ads campaign deliver every week?",
+   "must": [
+    "3 ready-to-post ads"
+   ]
+  },
+  {
+   "id": "r21",
+   "split": "test",
+   "q": "How long is the free audit call?",
+   "must": [
+    "20-minute"
+   ]
+  },
+  {
+   "id": "r22",
+   "split": "test",
+   "q": "Will the AI tell callers it is an AI?",
+   "must": [
+    "says it's AI"
+   ]
+  },
+  {
+   "id": "r23",
+   "split": "test",
+   "q": "Are calls recorded?",
+   "must": [
+    "recorded"
+   ]
+  },
+  {
+   "id": "r24",
+   "split": "test",
+   "q": "Is the new-client number a guarantee?",
+   "must": [
+    "target, not a guarantee"
+   ]
+  }
+ ],
+ "scope": [
+  {
+   "q": "What is the capital of France?",
+   "on": false,
+   "split": "dev"
+  },
+  {
+   "q": "Write me a poem about the ocean",
+   "on": false,
+   "split": "dev"
+  },
+  {
+   "q": "Who won the World Cup in 2018?",
+   "on": false,
+   "split": "dev"
+  },
+  {
+   "q": "How do I bake sourdough bread?",
+   "on": false,
+   "split": "dev"
+  },
+  {
+   "q": "Explain quantum entanglement",
+   "on": false,
+   "split": "dev"
+  },
+  {
+   "q": "Translate 'good morning' into Japanese",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "What is the best stock to buy today?",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "Give me a workout plan for abs",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "Who is the president of Brazil?",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "Recommend a good movie tonight",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "How tall is Mount Everest?",
+   "on": false,
+   "split": "test"
+  },
+  {
+   "q": "Solve 2x + 3 = 11",
+   "on": false,
+   "split": "test"
+  }
+ ],
+ "tools": [
+  {
+   "q": "How much is the VIP plan?",
+   "tool": "lookup_tier"
+  },
+  {
+   "q": "What does the $497 install cost and include?",
+   "tool": "lookup_tier"
+  },
+  {
+   "q": "Show me all your pricing",
+   "tool": "lookup_tier"
+  },
+  {
+   "q": "¿Cuánto cuesta el plan Pro?",
+   "tool": "lookup_tier"
+  },
+  {
+   "q": "I want to book a call",
+   "tool": "find_booking_slot"
+  },
+  {
+   "q": "Can I schedule an appointment for Thursday?",
+   "tool": "find_booking_slot"
+  },
+  {
+   "q": "Quiero agendar una cita",
+   "tool": "find_booking_slot"
+  },
+  {
+   "q": "Run the audit checklist for my plumbing business",
+   "tool": "audit_checklist"
+  },
+  {
+   "q": "Am I leaking money from missed calls? Check my setup",
+   "tool": "audit_checklist"
+  },
+  {
+   "q": "What is your mission?",
+   "tool": null
+  },
+  {
+   "q": "Do you log into my accounts?",
+   "tool": null
+  },
+  {
+   "q": "Who is behind Braylo SI?",
+   "tool": null
+  }
+ ],
+ "pii": [
+  {
+   "in": "Email me at jane.doe@example.com",
+   "must_not": "jane.doe@example.com"
+  },
+  {
+   "in": "Call 312-555-0142 tomorrow",
+   "must_not": "312-555-0142"
+  },
+  {
+   "in": "My SSN is 123-45-6789",
+   "must_not": "123-45-6789"
+  },
+  {
+   "in": "Card 4111 1111 1111 1111 exp 09/29",
+   "must_not": "4111 1111 1111 1111"
+  },
+  {
+   "in": "Phone (773) 555 0199",
+   "must_not": "555 0199"
+  },
+  {
+   "in": "How much is the audit?",
+   "same": true
+  }
+ ]
+}

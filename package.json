@@ -1,0 +1,15 @@
+{
+  "name": "braylo-si-rag",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "ingest": "node scripts/ingest.mjs",
+    "test": "node --import ./test/support/register.mjs --test test/*.test.js",
+    "eval": "node evals/run.mjs",
+    "build": "node build.mjs",
+    "index-vectors": "node scripts/index-vectors.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

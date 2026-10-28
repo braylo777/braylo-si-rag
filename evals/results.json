@@ -1,0 +1,143 @@
+{
+  "project": "braylo-si-rag",
+  "run_at": "2026-10-28T01:54:10.830Z",
+  "kb": {
+    "files": 5,
+    "chunks": 68
+  },
+  "retrieval": {
+    "bm25": {
+      "all": {
+        "n": 24,
+        "precision@1": 0.625,
+        "recall@1": 0.357,
+        "precision@3": 0.444,
+        "recall@3": 0.645,
+        "precision@5": 0.342,
+        "recall@5": 0.81,
+        "hit_rate_at_5": 0.917,
+        "mrr": 0.726
+      },
+      "dev": {
+        "n": 12,
+        "precision@1": 0.75,
+        "recall@1": 0.408,
+        "precision@3": 0.556,
+        "recall@3": 0.791,
+        "precision@5": 0.4,
+        "recall@5": 0.849,
+        "hit_rate_at_5": 1,
+        "mrr": 0.847
+      },
+      "test": {
+        "n": 12,
+        "precision@1": 0.5,
+        "recall@1": 0.306,
+        "precision@3": 0.333,
+        "recall@3": 0.5,
+        "precision@5": 0.283,
+        "recall@5": 0.771,
+        "hit_rate_at_5": 0.833,
+        "mrr": 0.605
+      }
+    },
+    "relevant_per_query": {
+      "min": 1,
+      "max": 9,
+      "mean": 2.458
+    },
+    "vector_bge_base": "not yet run (needs Workers AI embeddings; quota resets ~7 PM CT Oct 28)",
+    "hybrid_rrf": "not yet run (needs vector side)"
+  },
+  "scope_guard": {
+    "threshold_bm25": 6,
+    "dev": {
+      "n": 17,
+      "accuracy": 0.941,
+      "off_topic_blocked": "5/5",
+      "on_topic_false_blocks": "1/12"
+    },
+    "test": {
+      "n": 19,
+      "accuracy": 0.842,
+      "off_topic_blocked": "7/7",
+      "on_topic_false_blocks": "3/12"
+    }
+  },
+  "injection_guard": {
+    "source": "agent-14 evals/cases.json",
+    "attacks_blocked": "29/30",
+    "benign_false_positives": "0/10",
+    "braylo_queries_false_positives": "0/24",
+    "note": "Rules were tuned on the agent-14 set, so its numbers are optimistic."
+  },
+  "pii_redaction": {
+    "n": 6,
+    "passed": 6
+  },
+  "tool_routing": {
+    "router": "rules (fallback path)",
+    "n": 12,
+    "accuracy": 1,
+    "misses": [],
+    "llm_function_calling": "not yet run (needs Workers AI)"
+  },
+  "extractive_answers": {
+    "n": 24,
+    "answer_contains_gold_phrase": 0.417,
+    "citation_overlap_mean": 0.777,
+    "wrongly_blocked": [
+      "r11",
+      "r16",
+      "r22",
+      "r23"
+    ],
+    "note": "Extractive answers copy sentences from cited chunks, so citation overlap is near 1 by construction; the gold-phrase rate is the informative number."
+  },
+  "latency": {
+    "where": "box CPU, Node v20.19.2, extractive path, 24 queries (not Workers edge latency)",
+    "total_ms": {
+      "p50": 0.4,
+      "p95": 0.84
+    },
+    "per_span_ms": {
+      "pii_redact": {
+        "p50": 0,
+        "p95": 0.04
+      },
+      "guard_in": {
+        "p50": 0.01,
+        "p95": 0.02
+      },
+      "scope": {
+        "p50": 0.09,
+        "p95": 0.16
+      },
+      "retrieve": {
+        "p50": 0.11,
+        "p95": 0.26
+      },
+      "tool:lookup_tier": {
+        "p50": 0.12,
+        "p95": 0.44
+      },
+      "extractive": {
+        "p50": 0.08,
+        "p95": 0.18
+      },
+      "guard_out": {
+        "p50": 0.02,
+        "p95": 0.16
+      }
+    }
+  },
+  "not_yet_run": {
+    "reason": "Workers AI free daily quota exhausted until ~7 PM CT Oct 28, 2026",
+    "items": [
+      "vector (bge-base) and hybrid RRF retrieval metrics",
+      "LLM function-calling accuracy",
+      "LLM answer faithfulness (agent-11 judge)",
+      "live Workers latency p50/p95 and token counts"
+    ]
+  }
+}

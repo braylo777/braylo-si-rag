@@ -1,0 +1,24 @@
+name = "braylo-si-rag"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[ai]
+binding = "AI"   # Workers AI free tier, no API keys
+
+[[vectorize]]
+binding = "VECTORS"
+index_name = "braylo-si-rag-kb"   # 768 dims, cosine (bge-base-en-v1.5)
+
+[[kv_namespaces]]
+binding = "TRACES"
+id = "faab07dcb66544e3ba97614483fdd245"
+
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1017"
+simple = { limit = 5, period = 60 }
+
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true

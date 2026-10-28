@@ -1,0 +1,122 @@
+Braylo SI · Privacy Policy 
+ Privacy Policy: Braylo SI
+ Effective date: October 17, 2026 · Last updated: October 19, 2026 · Web address: /privacy.html 
+ Braylo SI, operated by Brandon Lopez ("we," "us"), [business address on the live page], United States. Braylo SI is a business name, not a separate company. Contact: braylo.ai@gmail.com.
+ We're a business-to-business service for business owners (for example, garage door companies). Our site isn't meant for consumers or children. This policy covers two things:
+- Our own data: what we collect through our website, our lead form and our booking page, the Meta pixel, emails, Stripe checkout, intake and calls.
+- Client lead data: the lead data we handle for client businesses when we run Basic (AI Voice Agent Install) for them (Section 4).
+ 1. What we collect
+ Category (CCPA) 
+ Examples 
+ Source 
+ Inquiry (lead) form and booking 
+ name, business, trade, email, phone, city, preferred language, your answers, the page you sent it from, your choice on the optional call/text consent box and its timestamp, and the details you enter when you book a free discovery call (such as name, email and the time you pick) 
+ you, through our website's own form and our discovery-call booking page on Google Calendar 
+ Identifiers and contact info 
+ name, business name, email, phone, billing address, IP address 
+ you, checkout, intake 
+ Emails you send us 
+ your address, message, headers and times 
+ you 
+ Commercial information 
+ what you bought, refunds, consent logs (timestamp, page, wording) 
+ Stripe, our records 
+ Payment information 
+ card details are handled by Stripe only ; we see the last 4 digits and the card brand 
+ Stripe 
+ Internet and ad activity 
+ pages viewed, form-submit and checkout-start events, device and browser data, IP address, cookie or pixel IDs, the ad you came from 
+ your browser, the Meta pixel (Section 6) 
+ Audio and voice 
+ recordings and transcripts of our own calls to people who checked our optional consent box (Section 3A). For clients' Grok Voice calls, none stored by us; that call audio and those transcripts live in the client's own xAI account (Section 4). 
+ you, on the call 
+ Professional information 
+ your industry, your FAQs, your intake answers 
+ you 
+ Inferences 
+ we don't profile you. Meta may make its own ad inferences under its policy (Section 6). 
+ Meta 
+ We don't knowingly collect sensitive personal information as defined by the CCPA. Please don't send any (our Terms exclude regulated data).
+ 2. Why we use it
+ To answer your inquiry. A person reviews any follow-up (Section 3).
+ To keep a timestamped lead log, which we use to measure and prove our 10-day blueprint delivery.
+ To sell, deliver and support Basic (AI Voice Agent Install); to bill you through Stripe; to handle refunds, the guarantee records, disputes and chargebacks.
+ To measure and improve our ads, and to show our ads to people who visited our page (Section 6).
+ To send service messages and opt-out confirmations.
+ To make the calls (and, once texting is set up, send the texts) you agree to with the optional consent box on our form, and to keep your consent record and our internal do-not-call list (Section 3A).
+ Security, fraud prevention and our legal duties.
+ 3. Replies, email and texting
+ When you submit our form, you'll see an on-screen confirmation. We reply by email; a person reviews every reply.
+ Your form answers are stored with our website host (Cloudflare) and copied to a Google Sheet in our Google account. Booking details are kept in our Google Calendar, and emails in Gmail. An AI provider may help draft follow-ups; a person reviews them before they're sent.
+ Marketing email (CAN-SPAM): every commercial email from us is labeled as such, shows our postal address (Braylo SI · [business address on the live page], United States) and tells you how to opt out. Reply "unsubscribe" (or use the link, where there is one). We honor it within 10 business days, with no charge and no login.
+ SMS/text is OFF at launch. Our form has an optional call/text consent box, unchecked by default. We call or text you from the form only if you check it (Section 3A), and we don't send texts until texting is set up. If texting is ever turned on, it will need your prior express written consent and A2P 10DLC registration first, and texts will follow your state's limits (for Florida: 8 AM–8 PM your local time, at most 3 per day).
+ 3A. Our own calls and texts to you (optional consent box)
+ Our website form has an optional box, unchecked by default, where you can agree that Braylo SI may call or text you. We make these calls and texts only to people who check that box .
+ They're about your request and Braylo SI's services, and they may include marketing. They may use an AI or prerecorded voice or automated technology. Calls may be recorded and transcribed.
+ Consent isn't required to buy. You don't have to check the box to buy anything from us.
+ Opting out: you can opt out anytime by saying "stop calling" on a call, replying STOP to a text, or emailing braylo.ai@gmail.com.
+ Message and data rates may apply.
+ We keep a record of your consent (including when you gave it and the phone number) and an internal do-not-call list.
+ Texting is not active yet. We won't send texts until texting is set up, as described in Section 3.
+ These are our own calls and texts. Calls that a client's Grok Voice agent answers or places are covered in Section 4.
+ 4. Lead data we process for clients (Basic, AI Voice Agent Install)
+ When a client's lead fills in a form or emails the client, our automations read that message in the client's own accounts to send the first reply the client approved.
+ For that data, we act as the client's service provider/processor. We use it only to provide the service, on the client's instructions. We don't sell it, share it, or use it for our own marketing, and we don't put our pixel on it.
+ Call recordings: if a client uses Grok Voice, the inbound calls it answers, and any follow-up or reminder calls it places at the client's request to people who gave prior written consent, are recorded and transcribed (audio and transcript), with a spoken notice at the start of each call. Callers who don't want to be recorded can hang up at any time. Recordings and transcripts are used to answer, book and follow up on the caller's request. They're stored in the client's own xAI account and the tools the client connects, not in Braylo SI's systems, and the client controls how long they're kept. Callers with questions about a recording should contact the client.
+ Who leads should contact: the client is responsible for its own privacy notice to its leads. Leads with requests should contact the client. If we receive a lead's request, we'll pass it to the client.
+ SMS data: if SMS is ever turned on, mobile numbers and SMS opt-in or consent data are never shared with or sold to third parties or affiliates for their marketing. The only exceptions are the processors that deliver the messages, such as the SMS provider and the carriers. Consent logs are kept at least 4 years.
+ 5. Who we share it with
+ Vendors: Stripe (payments); Google (Calendar, Sheets, Gmail); Meta (pixel, consent-gated); Cloudflare (Cloudflare Pages website hosting and form storage).
+ Google (Workspace, Calendar, Sheets, Gmail): booking, lead records and email.
+ Stripe: payments, receipts and refunds.
+ Meta (Facebook/Instagram): the pixel, for ad measurement and targeting (Section 6). This is the one disclosure that may count as "sharing" under California law.
+ AI providers (for example xAI's Grok and Grok Voice): drafting replies, briefs and AI-voice calls.
+ Our website host (Cloudflare Pages): serves this site, receives and stores what you send through our form, and keeps basic request logs (such as IP address, browser type, pages requested and times) for security and operations. Also the email/SMS delivery providers you or we connect.
+ Processors are bound by contract to use the data only to provide their service to us. We may also disclose data when the law requires it, to protect our rights, or in a merger or sale of the business.
+ 6. Meta pixel and cookies
+ Our landing page uses the Meta pixel to learn which Facebook and Instagram ads lead to visits, form submissions and checkout starts, and to show our ads to people who visited the page.
+ What it collects: page views, form-submit events (that a form was submitted, not what you typed in it ), checkout-start events, device and browser data, your IP address and cookie or pixel IDs.
+ Who gets it: this data is shared with Meta for ad measurement and targeting . Meta may combine it with your Meta account under its own policy (https://www.facebook.com/privacy/policy).
+ We don't sell your personal information. Under California law, the pixel may count as "sharing" for cross-context behavioral advertising. 
+ How to opt out: 
+ Use our Do Not Sell or Share My Personal Information link (also in the page footer), email braylo.ai@gmail.com with the subject "Do Not Sell or Share", or use our cookie settings.
+ We honor Global Privacy Control (GPC) signals as an opt-out of sharing for that browser.
+ You can also block or clear cookies in your browser settings, and change your ad preferences in your Meta account settings.
+ 7. Florida visitors and leads
+ Florida residents get the same choices described here: access, correction, deletion and opt-out requests go to braylo.ai@gmail.com.
+ We don't text or make automated calls to Florida leads without the prior express written consent the Florida Telephone Solicitation Act requires, and texting is off at launch.
+ 8. How long we keep it
+ Lead form entries and replies: 24 months from your last contact, unless you become a customer.
+ Customer and billing records: 7 years, for tax and accounting.
+ Consent logs and guarantee lead logs: 4 years, for TCPA and dispute records.
+ Do-not-call requests: 5 years from the request, so we keep honoring them.
+ Client lead data in our hands: deleted within 30 days after the service ends, unless it's part of the guarantee or dispute records above.
+ Site logs and pixel data: up to 12 months on our side; Cloudflare's basic request logs follow Cloudflare's own retention and policy; Meta's retention follows Meta's settings and policy.
+ 9. Security
+ We use delegated, revocable, least-privilege access, and two-factor sign-in on our accounts.
+ We never store payment card numbers, bank keys or Stripe/Shopify keys.
+ Data is encrypted in transit and stored with major cloud providers.
+ No system is perfectly secure. If a breach affects your data, we'll notify you as the law requires.
+ 10. Your privacy choices, including California
+ We offer these choices to everyone as a matter of good practice, whether or not a particular law requires them.
+- You can ask us to: 
+ 1. Know what personal information we've collected about you, its sources, our purposes, and who we disclose it to, and get a copy.
+ 2. Delete it, subject to legal exceptions such as billing records.
+ 3. Correct it if it's inaccurate.
+ 4. Opt out of sharing for ads (the Meta pixel, Section 6) through the "Do Not Sell or Share My Personal Information" link or a GPC signal. We don't sell personal information.
+ 5. Limit the use of sensitive personal information. We don't collect any.
+- No discrimination: we won't treat you differently for using these choices.
+- How to ask: 
+ - Email braylo.ai@gmail.com with "Privacy request" in the subject, or write to the address below.
+ - We'll verify your identity by matching details we already hold, such as your email.
+ - We'll confirm within 10 business days and respond within 45 days. We may extend that once by 45 days and will tell you if we do.
+ - An authorized agent can ask on your behalf with your signed permission.
+- Leads of our clients: please send requests to the business you contacted (Section 4).
+ 11. Children
+ Our services are for businesses. We don't knowingly collect personal information from anyone under 16. If we learn we have, we'll delete it.
+ 12. Changes
+ We'll post any update here with a new "Last updated" date. We'll email customers about material changes before they apply.
+ 13. Contact
+ braylo.ai@gmail.com · Braylo SI, [business address on the live page], United States.
+ Braylo SI · Privacy Policy · Do Not Sell or Share My Personal Information 
+Braylo SI · [business address on the live page], United States
