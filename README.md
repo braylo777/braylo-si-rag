@@ -81,7 +81,7 @@ Vector (bge-base) and hybrid RRF retrieval: **not yet run** (Workers AI daily qu
 
 ## How it ships
 ```bash
-pytest                       # 24-test reference suite, no network
+pytest                       # reference suite, no network
 (cd worker && cargo test)    # Rust parity tests, no network
 python evals/run.py          # writes evals/results.json
 python scripts/ingest.py      # after editing sources/
