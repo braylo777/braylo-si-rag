@@ -40,9 +40,9 @@ flowchart LR
 ```
 
 ## Eval results
-All numbers are measured by `node evals/run.mjs` (no model calls) and recorded in [`evals/results.json`](evals/results.json). Run on Oct 27, 2026.
+All numbers are measured by `python evals/run.py` (no model calls) and recorded in [`evals/results.json`](evals/results.json). Run on Oct 27, 2026.
 
-**Labels.** A chunk counts as relevant if it contains every gold phrase for the query (`evals/queries.json`). Labels are computed, not hand-picked, so they are reproducible. Queries have 1 to 9 relevant chunks (mean 2.5). `dev` was used to set the scope threshold; `test` was not used for tuning.
+**Labels.** A chunk counts as relevant if it contains every gold phrase for the query (`data/queries.json`). Labels are computed, not hand-picked, so they are reproducible. Queries have 1 to 9 relevant chunks (mean 2.5). `dev` was used to set the scope threshold; `test` was not used for tuning.
 
 **Retrieval, BM25:**
 
@@ -70,21 +70,23 @@ Vector (bge-base) and hybrid RRF retrieval: **not yet run** (Workers AI daily qu
 **Not yet run** (Workers AI free daily quota exhausted until about 7 PM CT Oct 28, 2026): vector and hybrid retrieval metrics, LLM function-calling accuracy, LLM answer faithfulness (agent-11 judge), live latency p50/p95 and token counts.
 
 ## How it was built
-- `scripts/ingest.mjs`: `sources/` → heading-aware chunks (≤700 chars, one-line overlap) → `src/kb.js`.
-- `src/retrieve.js`: BM25 + Vectorize, RRF fusion, BM25 fallback.
-- `src/tools.js`: tool implementations, JSON schemas, and the rules router used when the model is down.
-- `src/agent.js`: the pipeline, each step a traced span.
-- `src/guards.js`, `src/obs.js`, `src/metrics.js`, `src/bm25.js`: reused from agents 14, 13 and 11.
-- `scripts/index-vectors.mjs`: embeds and upserts the chunks into Vectorize (run once, after the quota reset).
-- No runtime dependencies. Tests use Node's built-in runner.
+- `scripts/ingest.py`: `sources/` → heading-aware chunks (≤700 chars, one-line overlap) → `data/kb.json`.
+- `src/braylo_si_rag/retrieve.py`: BM25 + Vectorize, RRF fusion, BM25 fallback.
+- `src/braylo_si_rag/tools.py`: tool implementations, JSON schemas, and the rules router used when the model is down.
+- `src/braylo_si_rag/agent.py`: the pipeline, each step a traced span.
+- `guards.py`, `obs.py`, `metrics.py`, `bm25.py`: reused from agents 14, 13 and 11.
+- `scripts/index_vectors.py`: embeds and upserts the chunks into Vectorize (run once, after the quota reset).
+- **Two implementations, one behaviour.** The Python package is the reference. The Cloudflare Worker is Rust (`worker/`, workers-rs compiled to WASM) and returns the same JSON for the same inputs (checked against the old JS on a shared corpus: 0 differences). Rust tests: `cargo test` in `worker/`.
+- No runtime dependencies in Python. Tests use pytest.
 
 ## How it ships
 ```bash
-npm test                 # 24 tests, no network
-npm run eval             # writes evals/results.json
-npm run ingest           # after editing sources/
-npm run index-vectors    # needs CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN in env
-npx wrangler deploy      # or: node build.mjs, then upload dist/worker.js
+pytest                       # 24-test reference suite, no network
+(cd worker && cargo test)    # Rust parity tests, no network
+python evals/run.py          # writes evals/results.json
+python scripts/ingest.py      # after editing sources/
+python scripts/index_vectors.py   # needs CLOUDFLARE_ACCOUNT_ID + CLOUDFLARE_API_TOKEN in env
+(cd worker && worker-build --release && wrangler deploy)   # list deployments first; deploy only on approval
 ```
 Free tier only: Workers, Workers AI, Vectorize, KV and the rate-limit binding (5 requests per minute per IP). The rollback point is the git tag `v0-rollback`.
 
@@ -92,7 +94,7 @@ Free tier only: Workers, Workers AI, Vectorize, KV and the rate-limit binding (5
 `POST /api/chat {message}` · `GET /api/search?q=` · `POST /api/tool {name,args}` · `GET /api/tools` · `GET /api/metrics` · `GET /api/eval` · `GET /api/health`
 
 ## Limits
-- The knowledge base is a snapshot of the preview site; rerun `npm run ingest` after site changes.
+- The knowledge base is a snapshot of the preview site; rerun `python scripts/ingest.py` after site changes.
 - The KV trace index is optimistic and can drop a few IDs under concurrent writes.
 - The scope guard is lexical, so it misses some paraphrased off-topic asks and blocks some real questions (3/12 on test).
 
